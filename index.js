@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 mongoose.set("strictQuery", true);
 const todoRouter = require("./routes/todo");
 const connectDB = require("./database/connection");
+require("dotenv").config()
 
 const app = express();
 app.use(express.json());
