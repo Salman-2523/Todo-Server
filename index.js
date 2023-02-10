@@ -12,8 +12,11 @@ const app = express();
 //     origin:'*', 
 //     credentials:true,            //access-control-allow-credentials:true
 //     optionSuccessStatus:200,
+// "Access-Control-Allow-Methods": "OPTIONS,POST,GET,PUT,PATCH,DELETE"
 //  }
-app.use(cors());
+ app.use(cors({
+    methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
+}));
 
 app.use(express.json());
 app.get('/',(_,res)=> res.send('Hello From Server!'))
