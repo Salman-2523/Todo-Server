@@ -7,6 +7,7 @@ require("dotenv").config()
 
 const app = express();
 app.use(express.json());
+app.get('/',(_,res)=> res.send('Hello From Server!'))
 app.use("/todos", todoRouter);
 
 
