@@ -7,6 +7,7 @@ require("dotenv").config()
 
 const app = express();
 app.use(express.json());
+app.use("/todos", todoRouter);
 
 
 // connects to database and then start the server
@@ -16,7 +17,6 @@ connectDB().then(() => {
     })
 })
 
-app.use("/todos", todoRouter);
 
 
 
